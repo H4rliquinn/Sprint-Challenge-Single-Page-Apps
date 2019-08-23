@@ -17,6 +17,12 @@ export default function LocationCard(props) {
         })} */}
       </Card.Description>
     </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        {props.data.residents.length} Residents
+      </a>
+    </Card.Content>
   </Card>
   )
 }
