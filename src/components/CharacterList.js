@@ -6,19 +6,19 @@ export default function CharacterList() {
   const [charList,setCharList] = useState(data);
   useEffect(() => {
 
-    axios
-    .get('https://rickandmortyapi.com/api/character/')
-    .then(res => {
-      // console.log(res);
-      // setCharList(res.data);
+    // axios
+    // .get('https://rickandmortyapi.com/api/character/')
+    // .then(res => {
+    //   // console.log(res);
+    //   // setCharList(res.data);
 
-    })
-    .catch((err)=>{
-      console.log("AAAAHHHH!!!!",err);
-    });
+    // })
+    // .catch((err)=>{
+    //   console.log("AAAAHHHH!!!!",err);
+    // });
 
     setCharList(data);
-    console.log(charList);
+    // console.log(charList);
   }, []);
 
 
