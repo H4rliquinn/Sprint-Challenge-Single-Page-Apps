@@ -26,7 +26,7 @@ const TabNav = () =>{
             </Menu.Item>
         </Menu>
     ) 
-}  
+}
 
 // const TabNav = () => <Tab panes={panes} />
 
