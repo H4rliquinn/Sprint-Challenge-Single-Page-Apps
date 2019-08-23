@@ -17,16 +17,16 @@ const TabNav = () =>{
     return(
         <Menu tabular>
             <Menu.Item as={NavLink} exact={true} to="/">
-            Home
+            <Icon name='home' />Home
             </Menu.Item>
             <Menu.Item as={NavLink} to="/characters">
-            Characters
+            <Icon name='users' />Characters
             </Menu.Item>
             <Menu.Item as={NavLink} to="/locations">
-            Locations
+            <Icon name='location arrow' />Locations
             </Menu.Item>
             <Menu.Item as={NavLink} to="/episodes">
-            Episodes
+            <Icon name='video' />Episodes
             </Menu.Item>
         </Menu>
     ) 
