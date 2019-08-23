@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList.js';
 import LocationsList from "./components/LocationsList.js";
 import EpisodeList from "./components/EpisodeList.js";
+import {Route} from 'react-router-dom';
 
 export default function App() {
   return (
@@ -12,7 +13,10 @@ export default function App() {
       {/* <TabNav /> */}
       {/* <CharacterList/> */}
       {/* <LocationsList/> */}
-      <EpisodeList/>
+      {/* <EpisodeList/> */}
+    <Route exact path="/characters" component={CharacterList}/>
+    <Route path="/locations" component={LocationsList}/>
+    <Route path="/episodes" component={EpisodeList}/>
     </main>
 
   );
