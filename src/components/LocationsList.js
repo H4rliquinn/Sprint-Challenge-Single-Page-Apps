@@ -6,18 +6,18 @@ export default function LocationsList() {
     const [locList,setlocList] = useState(data);
     useEffect(() => {
   
-    //   axios
-    //   .get('https://rickandmortyapi.com/api/location/')
-    //   .then(res => {
-    //     // console.log(res);
-    //     setCharList(res.data);
+      axios
+      .get('https://rickandmortyapi.com/api/location/')
+      .then(res => {
+        // console.log(res);
+        setlocList(res.data);
   
-    //   })
-    //   .catch((err)=>{
-    //     console.log("AAAAHHHH!!!!",err);
-    //   });
+      })
+      .catch((err)=>{
+        console.log("AAAAHHHH!!!!",err);
+      });
   
-      setlocList(data);
+    //   setlocList(data);
     //   console.log(locList);
     }, []);
   
