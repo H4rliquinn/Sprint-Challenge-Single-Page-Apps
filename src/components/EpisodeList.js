@@ -6,18 +6,18 @@ export default function EpisodeList() {
     const [epList,setepList] = useState(data);
     useEffect(() => {
   
-      axios
-      .get('https://rickandmortyapi.com/api/episode/')
-      .then(res => {
-        // console.log(res);
-        setepList(res.data);
+    //   axios
+    //   .get('https://rickandmortyapi.com/api/episode/')
+    //   .then(res => {
+    //     // console.log(res);
+    //     setepList(res.data);
   
-      })
-      .catch((err)=>{
-        console.log("AAAAHHHH!!!!",err);
-      });
+    //   })
+    //   .catch((err)=>{
+    //     console.log("AAAAHHHH!!!!",err);
+    //   });
   
-    //   setepList(data);
+      setepList(data);
     //   console.log(epList);
     }, []);
   
