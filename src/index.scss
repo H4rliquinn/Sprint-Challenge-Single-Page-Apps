@@ -37,3 +37,10 @@ main {
 header h1 {
   text-align: center;
 }
+
+.active{
+  color:red;
+  &:hover{
+    color:green;
+  }
+}

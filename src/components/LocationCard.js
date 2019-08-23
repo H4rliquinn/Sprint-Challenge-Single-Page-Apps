@@ -10,11 +10,11 @@ export default function LocationCard(props) {
       <Card.Description>
       <p>Status: {props.data.type}</p>
       <p>Species:{props.data.dimension} </p>
-      <h3>Residents</h3>
+      {/* <h3>Residents</h3>
       {props.data.residents.map(item=>{
                     // console.log(item);
           return <p>Type:{item} </p>
-        })}
+        })} */}
       </Card.Description>
     </Card.Content>
   </Card>

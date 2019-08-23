@@ -10,13 +10,10 @@ export default function App() {
   return (
     <main>
       <Header />
-      {/* <TabNav /> */}
-      {/* <CharacterList/> */}
-      {/* <LocationsList/> */}
-      {/* <EpisodeList/> */}
-    <Route exact path="/characters" component={CharacterList}/>
-    <Route path="/locations" component={LocationsList}/>
-    <Route path="/episodes" component={EpisodeList}/>
+      <TabNav />
+      <Route path="/characters" component={CharacterList}/>
+      <Route path="/locations" component={LocationsList}/>
+      <Route path="/episodes" component={EpisodeList}/>
     </main>
 
   );
