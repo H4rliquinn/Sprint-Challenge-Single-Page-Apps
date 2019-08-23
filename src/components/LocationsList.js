@@ -27,7 +27,7 @@ export default function LocationsList() {
       <section className="character-list grid-view">
         {locList.results.map(item=>{
                     // console.log(item);
-          return <LocationCard data={item}/>
+          return <LocationCard key={item.id} data={item}/>
         })}     
       </section>
     );

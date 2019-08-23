@@ -14,6 +14,10 @@ export default function CharacterCard(props) {
         <p>Gender:{props.data.gender} </p>
       </Card.Description>
     </Card.Content>
+    <Card.Content extra>
+        <Icon name='user' />
+        {props.data.episode.length} Episodes
+    </Card.Content>
   </Card>
   )
 }

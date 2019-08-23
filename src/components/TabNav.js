@@ -1,9 +1,5 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
-import CharacterList from './CharacterList.js';
-import LocationsList from "./LocationsList.js";
-import EpisodeList from "./EpisodeList.js";
-import WelcomePage from "./WelcomePage.js";
+import { Menu, Icon } from "semantic-ui-react";
 import { NavLink } from 'react-router-dom'
 
 // const panes = [

@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon } from 'semantic-ui-react';
 
 export default function LocationCard(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <Card>
     <Card.Content>
@@ -18,10 +18,8 @@ export default function LocationCard(props) {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
         <Icon name='user' />
         {props.data.residents.length} Residents
-      </a>
     </Card.Content>
   </Card>
   )

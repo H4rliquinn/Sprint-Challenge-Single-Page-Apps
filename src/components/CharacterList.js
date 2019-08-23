@@ -26,7 +26,7 @@ export default function CharacterList() {
   return (
     <section className="character-list grid-view">
       {charList.results.map(item=>{
-        return <CharacterCard data={item}/>
+        return <CharacterCard  key={item.id} data={item}/>
       })}     
     </section>
   );
