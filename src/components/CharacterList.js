@@ -1,34 +1,60 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from './CharacterCard.js';
+import { Button, Icon } from 'semantic-ui-react'
 
 export default function CharacterList() {
   const [charList,setCharList] = useState(data);
+  const [newChar,setNewChar] = useState();
   useEffect(() => {
+    
+    console.log("USE!");
+    axios
+    .get(newChar?newChar:'https://rickandmortyapi.com/api/character/')
+    .then(res => {
+      // console.log(res);
+      setCharList(res.data);
 
-    // axios
-    // .get('https://rickandmortyapi.com/api/character/')
-    // .then(res => {
-    //   // console.log(res);
-    //   setCharList(res.data);
+    })
+    .catch((err)=>{
+      console.log("AAAAHHHH!!!!",err);
+    });
 
-    // })
-    // .catch((err)=>{
-    //   console.log("AAAAHHHH!!!!",err);
-    // });
-
-    setCharList(data);
+    // setCharList(data);
     // console.log(charList);
-  }, []);
-
-
+  }, [newChar]);
   
+  const backHandler=(e)=>{
+    // console.log(charList);
+    if (charList.info.prev){
+      setNewChar(charList.info.prev);
+    }
+  }
+
+  const nextHandler=(e)=>{
+    if (charList.info.next){
+      setNewChar(charList.info.next);
+    }
+  }
+
   return (
+    <div>
+      <div className="pageButtons">
+        <Button icon labelPosition='left' onClick={backHandler}>
+          <Icon name='left arrow' />
+          Back
+        </Button>
+        <Button icon labelPosition='right' onClick={nextHandler}>
+          Next
+          <Icon name='right arrow' />
+        </Button>
+    </div>
     <section className="character-list grid-view">
       {charList.results.map(item=>{
         return <CharacterCard  key={item.id} data={item}/>
       })}     
     </section>
+    </div>
   );
 }
 
