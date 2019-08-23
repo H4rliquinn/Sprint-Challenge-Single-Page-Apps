@@ -45,15 +45,18 @@ header h1 {
   }
 }
 
-.ui .card {
-  width:40%;
-  .image{
-    text-align: center;
-  }
-  .header{
-    text-align: center;
-  }
-  .extra{
-    text-align:right;
+.ui.card {
+  width:320px;
+  .content{
+    width:100%;
+    .image{
+      text-align: center;
+    }
+    .header{
+      text-align: center;
+    }
+    .extra{
+      text-align:right;
+    }
   }
 }
