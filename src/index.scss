@@ -37,3 +37,33 @@ main {
 header h1 {
   text-align: center;
 }
+
+.active{
+  color:red;
+  &:hover{
+    color:green;
+  }
+}
+
+.ui.card {
+  width:320px;
+  .content{
+    width:100%;
+    .image{
+      text-align: center;
+    }
+    .header{
+      text-align: center;
+    }
+    .extra{
+      text-align:right;
+    }
+  }
+}
+
+.pageButtons{
+  margin:0px 30px;
+  width:"100%";
+  display:flex;
+  justify-content:space-between;
+}
